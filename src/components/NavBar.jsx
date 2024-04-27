@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -9,7 +10,7 @@ function NavBar() {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container fluid >
-                <Navbar.Brand href="#gotohome">Game House</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">Game House</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -17,13 +18,13 @@ function NavBar() {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Sign In</Nav.Link>
-                        <Nav.Link href="#action2">Donate</Nav.Link>
+                        <Nav.Link as={Link} to="/signIn" >Sign In</Nav.Link>
+                        <Nav.Link href='#donate-section'>Donate</Nav.Link>
                         <NavDropdown title="Games" id="navbarScrollingDropdown">
-                            <NavDropdown.Item href="#action3">About Games</NavDropdown.Item>
-                            <NavDropdown.Item href="#action4">Suggest New Game</NavDropdown.Item>
+                            <NavDropdown.Item href='#about-section' >About Games</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/suggestNewGame" >Suggest New Game</NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link href="#action5" style={{color: 'grey'}}> About </Nav.Link>
+                        <Nav.Link href='#about-section' style={{ color: 'grey' }}> About </Nav.Link>
                     </Nav>
                     <Form className="d-flex">
                         <Form.Control

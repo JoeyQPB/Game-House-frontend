@@ -4,7 +4,8 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom';
 
 import Home from './pages/home/home.jsx';
-import SugestaoJogo from './pages/sugestaoJogo.jsx'
+import SuggestNewGame from './pages/SuggestNewGame.jsx'
+import SignIn from './pages/SignIn.jsx'
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
       <div className='app'>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/sugestoes_form' element={<SugestaoJogo />} />
+          <Route path='/SignIn' element={<SignIn />} />
+          <Route path='/SuggestNewGame' element={<SuggestNewGame />} />
         </Routes>
       </div>
     </>
