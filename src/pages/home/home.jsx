@@ -10,42 +10,52 @@ const Home = () => {
         <>
             <NavBar />
             <div className="page-div">
-                <div className="game-container">
+                <div id="Games" className="game-container">
                     <GameCard
-                        imageUrl="https://via.placeholder.com/150"
-                        title="Game 1"
-                        description="Description for Game 1"
+                        imageUrl="src/assets/joeykemon-pic.png"
+                        title="JoeyKemon"
+                        description="JoeyKemon description"
                     />
                     <GameCard
-                        imageUrl="https://via.placeholder.com/150"
-                        title="Game 2"
-                        description="Description for Game 2"
+                        imageUrl="src/assets/spaceInvaders-pic.png"
+                        title="Space Invaders"
+                        description="Space Invaders Description"
                     />
                     <GameCard
-                        imageUrl="https://via.placeholder.com/150"
-                        title="Game 3"
-                        description="Description for Game 3"
+                        imageUrl="src/assets/figthMaster-pic.png"
+                        title="Figth Master"
+                        description="Figth Master Description"
                     />
                     <GameCard
-                        imageUrl="https://via.placeholder.com/150"
-                        title="Game 4"
-                        description="Description for Game 4"
+                        imageUrl="src/assets/shootGame-pic.png"
+                        title="Shoot Game"
+                        description="shootGame Description"
                     />
                     <GameCard
-                        imageUrl="https://via.placeholder.com/150"
-                        title="Game 5"
-                        description="Description for Game 5"
+                        imageUrl="src/assets/KingJump-pic.png"
+                        title="King Jump"
+                        description="KingJump Description"
                     />
                     <GameCard
-                        imageUrl="https://via.placeholder.com/150"
-                        title="Game 6"
-                        description="Description for Game 6"
+                        imageUrl="src/assets/hogart-pic.png"
+                        title="hogart"
+                        description="hogart game Description"
+                    />
+                    <GameCard
+                        imageUrl="src/assets/littleSnake-pic.png"
+                        title="littleSnake"
+                        description="littleSnake Description"
+                    />
+                    <GameCard
+                        imageUrl="src/assets/pacMan-pic.webp"
+                        title="Pac Man"
+                        description="Pac Man Description"
                     />
                 </div>
-                <div className="donate-container">
+                <div id="donate-section" className="donate-container">
                     <DonateComponent />
                 </div>
-                <div className="about-container">
+                <div id="about-section" className="about-container">
                     <AboutGames />
                     <About />
                 </div>
