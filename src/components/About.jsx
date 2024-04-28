@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function About() {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: '#AFEEEE' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', background: '#4169E1' }}>
             <h2>About</h2>
             <p>Some short site description </p>
             <p>Some short me description </p>

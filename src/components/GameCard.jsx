@@ -23,7 +23,7 @@ function GameCard({ imageUrl, title, description, gamePage }) {
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
-                        <Row noGutters>
+                        <Row noGutters style={{ background: 'black' }}>
                             <Col xs={4}>
                                 <Card.Img
                                     variant="top"
@@ -36,8 +36,8 @@ function GameCard({ imageUrl, title, description, gamePage }) {
                                     <Card.Title
                                         style={{
                                             fontSize: '20px',
-                                            fontWeight: 'bold',
-                                            color: '#333',
+                                            fontWeight: 'bolder',
+                                            color: 'white',
                                             textAlign: 'center',
                                             textTransform: 'uppercase',
                                             marginBottom: '10px',
@@ -47,8 +47,9 @@ function GameCard({ imageUrl, title, description, gamePage }) {
                                     </Card.Title>
                                     <Card.Text
                                         style={{
+                                            font: 'caption',
                                             fontSize: '14px',
-                                            color: '#666',
+                                            color: '#A9A9A9',
                                             textAlign: 'center',
                                             marginBottom: '20px',
                                         }}

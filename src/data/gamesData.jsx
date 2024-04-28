@@ -8,7 +8,7 @@ export const gamesData = [
     {
         imageUrl: "src/assets/spaceInvaders-pic.png",
         title: "Space Invaders",
-        description: "Defend Earth from an onslaught of descending alien invaders by controlling a laser cannon. Move horizontally to aim and shoot at the invaders while dodging their incoming fire. Destroy all aliens before they reach the bottom of the screen to progress to the next wave.",
+        description: "Defend Earth from an onslaught of descending alien invaders by controlling a laser cannon. Move horizontally to aim and shoot at the invaders while dodging their incoming fire.",
         gamePage: "https://joeyqpb.github.io/Space-Invaders/"
     },
     {

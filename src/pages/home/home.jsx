@@ -1,28 +1,28 @@
 import { useState } from 'react';
-import About from "../../components/About";
-import AboutGames from "../../components/AboutGames";
+import { gamesData } from "../../data/gamesData";
+import NavBar from '../../components/NavBar';
 import GameCard from "../../components/GameCard";
-import NavBar from "../../components/NavBar";
 import DonateComponent from "../../components/DonateComponent";
-import { gamesData } from "../../data/gamesData"
+import AboutGames from "../../components/AboutGames";
+import About from "../../components/About";
 import './homeStyle.css';
 
 const Home = () => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [query, setQuery] = useState('');
 
-    const handleSearch = (event) => {
-        setSearchTerm(event.target.value);
-    };
+    const getFilterItems = (query, items) => {
+        if (!query) return items;
+        return items.filter(item => item.title.toLowerCase().includes(query.toLowerCase()));
+    }
+    const filteredItems = getFilterItems(query, gamesData);
 
-    const filteredGames = gamesData.filter((game) =>
-        game.title.toLowerCase().includes(searchTerm.toLowerCase())
-    );
     return (
         <>
-            <NavBar handleSearch={handleSearch} />
+            <NavBar onSearch={setQuery} />
+
             <div className="page-div">
                 <div id="Games" className="game-container">
-                    {filteredGames.map((game, index) => (
+                    {filteredItems.map((game, index) => (
                         <GameCard
                             key={index}
                             imageUrl={game.imageUrl}
