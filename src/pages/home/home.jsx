@@ -3,7 +3,6 @@ import { gamesData } from "../../data/gamesData";
 import NavBar from '../../components/NavBar';
 import GameCard from "../../components/GameCard";
 import DonateComponent from "../../components/DonateComponent";
-import AboutGames from "../../components/AboutGames";
 import About from "../../components/About";
 import './homeStyle.css';
 
@@ -39,7 +38,6 @@ const Home = () => {
                     <DonateComponent />
                 </div>
                 <div id="about-section" className="about-container">
-                    <AboutGames />
                     <About />
                 </div>
             </div>
