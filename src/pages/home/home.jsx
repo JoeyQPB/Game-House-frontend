@@ -32,6 +32,9 @@ const Home = () => {
                         />
                     ))}
                 </div>
+            </div>
+
+            <div className="bottom-content-container">
                 <div id="donate-section" className="donate-container">
                     <DonateComponent />
                 </div>

@@ -3,6 +3,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
     margin-bottom: 3rem;
+    min-height: calc(55vh);
 }
 
 .page-div {
@@ -12,6 +13,12 @@
     align-items: center;
     margin-top: 3rem;
     width: 100%;
+}
+
+.bottom-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .donate-container {
