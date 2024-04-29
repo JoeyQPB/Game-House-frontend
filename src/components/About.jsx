@@ -9,12 +9,12 @@ function About() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            background: '#00008b',
+            background: '#241178',
             padding: '20px',
             textAlign: 'center',
             color: 'Snow'
         }}>
-            <h2>About</h2>
+            <h3 style={{ fontWeight: 'bold' }}>About</h3>
             <p style={{ width: '55rem' }}>
                 At Game House, we're passionate about crafting engaging gaming experiences using the power of JavaScript, HTML, and CSS. Our games are meticulously developed with these technologies, ensuring seamless gameplay and stunning visuals.
             </p>
