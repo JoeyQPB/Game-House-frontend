@@ -18,7 +18,12 @@ const Home = () => {
     return (
         <>
             <NavBar onSearch={setQuery} />
-
+            <center> <h2 style={{
+                marginTop: '2rem',
+                color: 'white',
+                fontWeight: 'bold',
+                marginBottom: '2rem',
+            }}>Welcome to Game House - Where Games Come to Life!</h2></center>
             <div className="page-div">
                 <div id="Games" className="game-container">
                     {filteredItems.map((game, index) => (
