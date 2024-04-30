@@ -11,6 +11,12 @@ function ProfileComponent() {
     //         .catch(error => console.error('Error fetching profile data:', error));
     // }, []);
 
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    let email;
+    if (loggedInUser) {
+        email = loggedInUser.split(':')[1].split('"')[1];
+    }
+
     return (
         <div className="profile-container">
             {/* {profileData && ( */}
@@ -24,7 +30,7 @@ function ProfileComponent() {
                         ))}
                     </ul> */}
                 <img src='src/assets/github-logo.jpg' alt="Profile" className="profile-photo" />
-                <p className="profile-email">exemple@email.com</p>
+                <p className="profile-email">{email}</p>
                 <h2 className="profile-title">Suggestions Made:</h2>
                 <ul className="suggestions-list">
                     <li key='1'>suggestion 1</li>

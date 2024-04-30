@@ -8,6 +8,13 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
 const NavBar = ({ onSearch }) => {
+    
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    let email;
+    if (loggedInUser) {
+        email = loggedInUser.split('@')[0].split('"')[3];
+    }
+
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container fluid>
@@ -19,7 +26,11 @@ const NavBar = ({ onSearch }) => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link as={Link} to="/signIn">Sign In</Nav.Link>
+                        {loggedInUser ? (
+                            <Nav.Link as={Link} to="/profile">{email}</Nav.Link>
+                        ) : (
+                            <Nav.Link as={Link} to="/signIn">Sign In</Nav.Link>
+                        )}
                         <Nav.Link href='#donate-section'>Donate</Nav.Link>
                         <NavDropdown title="Games" id="navbarScrollingDropdown">
                             <NavDropdown.Item href='#about-section'>About Games</NavDropdown.Item>
