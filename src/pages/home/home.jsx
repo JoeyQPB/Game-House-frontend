@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { gamesData } from "../../data/gamesData";
 import NavBar from '../../components/NavBar';
 import GameCard from "../../components/GameCard";
-import DonateComponent from "../../components/DonateComponent";
 import About from "../../components/About";
 import './homeStyle.css';
 
@@ -39,9 +38,6 @@ const Home = () => {
             </div>
 
             <div className="bottom-content-container">
-                <div id="donate-section" className="donate-container">
-                    <DonateComponent />
-                </div>
                 <div id="about-section" className="about-container">
                     <About />
                 </div>
