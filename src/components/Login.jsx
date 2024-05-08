@@ -2,7 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-import { useState, useContext } from 'react';
+import { useState } from 'react';
+// import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import { AuthContext } from '../contexts/authContext'
 // import apiGateway from '../api/apiGateway';
