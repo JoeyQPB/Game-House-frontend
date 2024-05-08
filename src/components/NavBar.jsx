@@ -8,7 +8,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
 const NavBar = ({ onSearch }) => {
-    
+
     const loggedInUser = localStorage.getItem('loggedInUser');
     let email;
     if (loggedInUser) {
@@ -31,7 +31,7 @@ const NavBar = ({ onSearch }) => {
                         ) : (
                             <Nav.Link as={Link} to="/signIn">Sign In</Nav.Link>
                         )}
-                        <Nav.Link href='#donate-section'>Donate</Nav.Link>
+                        <Nav.Link as={Link} to="/donate">Donate</Nav.Link>
                         <NavDropdown title="Games" id="navbarScrollingDropdown">
                             <NavDropdown.Item href='#about-section'>About Games</NavDropdown.Item>
                             <NavDropdown.Item as={Link} to="/suggestNewGame">Suggest New Game</NavDropdown.Item>
