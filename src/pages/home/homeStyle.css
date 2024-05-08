@@ -21,12 +21,6 @@
     justify-content: flex-end;
 }
 
-.donate-container {
-    display: flex;
-    width: 100%;
-    margin-bottom: 0;
-}
-
 .about-container {
     display: flex;
     width: 100%;
