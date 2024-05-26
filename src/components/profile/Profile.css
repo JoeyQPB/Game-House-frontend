@@ -43,3 +43,57 @@
     text-align: center;
     margin-bottom: 5px;
 }
+
+.profile-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.profile-email {
+    text-align: center;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.profile-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.suggestions-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.suggestions-table th,
+.suggestions-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.suggestions-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.suggestions-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.suggestions-table tr:hover {
+    background-color: #ddd;
+}
