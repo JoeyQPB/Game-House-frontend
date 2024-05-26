@@ -2,15 +2,14 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
-import { useState } from 'react';
-// import { useContext } from 'react';
+import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import { AuthContext } from '../contexts/authContext'
-// import apiGateway from '../api/apiGateway';
+import { AuthContext } from '../contexts/authContext'
+import apiUser from '../api/apiUser';
 
 function LogIn() {
     const navigate = useNavigate();
-    // const { setLoggedInUser } = useContext(AuthContext);
+    const { setLoggedInUser } = useContext(AuthContext);
 
     const [form, setForm] = useState({
         email: "",
@@ -25,12 +24,10 @@ function LogIn() {
         e.preventDefault();
 
         try {
-            // const response = await api.post("/user/login", form);
-            // setLoggedInUser({ ...response.data });
-            // localStorage.setItem("loggedInUser", JSON.stringify(response.data));
-            localStorage.setItem("loggedInUser", JSON.stringify(form));
-            // setLoggedInUser({ form });
-
+            const response = await apiUser.post("/api/auth/login", form);
+            setLoggedInUser({ ...response.data });
+            localStorage.setItem("loggedInUser", JSON.stringify(response.data));
+            setLoggedInUser({ form });
 
             console.log({ form })
             navigate("/");

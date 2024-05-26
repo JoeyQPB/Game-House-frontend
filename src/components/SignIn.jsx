@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import apiGateway from '../api/apiGateway';
+import apiUser from '../api/apiUser';
 
 function SignIn() {
     const navigate = useNavigate();
@@ -20,9 +20,8 @@ function SignIn() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-
         try {
-            // await apiGateway.post("/user/signup", { ...form });
+            await apiUser.post("/api/auth/register_user", { ...form });
             console.log({ form })
             navigate("/login");
         } catch (error) {
