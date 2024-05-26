@@ -9,11 +9,11 @@ import Container from 'react-bootstrap/Container';
 
 const NavBar = ({ onSearch }) => {
 
-    const loggedInUser = localStorage.getItem('loggedInUser');
+    const loggedInUserJSON = localStorage.getItem("loggedInUser");
+    const parseLoggedInUser = JSON.parse(loggedInUserJSON || '""');
     let email;
-    if (loggedInUser) {
-        email = loggedInUser.split('@')[0].split('"')[3];
-    }
+
+    if (parseLoggedInUser) email = parseLoggedInUser.user.email.split('@')[0];
 
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
@@ -26,7 +26,7 @@ const NavBar = ({ onSearch }) => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        {loggedInUser ? (
+                        {parseLoggedInUser ? (
                             <Nav.Link as={Link} to="/profile">{email}</Nav.Link>
                         ) : (
                             <Nav.Link as={Link} to="/signIn">Sign In</Nav.Link>
