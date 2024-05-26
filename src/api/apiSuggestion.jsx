@@ -1,13 +1,13 @@
 import axios from "axios";
 
-// const apiURLs = {
-//     development: "",
-//     production: "",
-// };
+const apiURLs = {
+    development: "http://localhost:8082",
+    production: "",
+};
 
-const apiGateway = axios.create({ baseURL: "" });
+const apiSuggestion = axios.create({ baseURL: apiURLs.development });
 
-apiGateway.interceptors.request.use((config) => {
+apiSuggestion.interceptors.request.use((config) => {
     const loggedInUserJSON = localStorage.getItem("loggedInUser");
 
     const parseLoggedInUser = JSON.parse(loggedInUserJSON || '""');
@@ -19,4 +19,4 @@ apiGateway.interceptors.request.use((config) => {
     return config;
 });
 
-export { apiGateway };
+export default apiSuggestion;
