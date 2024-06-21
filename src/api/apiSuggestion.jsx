@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiURLs = {
-    development: "http://localhost:8082",
+    development: "http://3.133.98.250:8082",
     production: "",
 };
 
