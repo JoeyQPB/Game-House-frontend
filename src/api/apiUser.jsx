@@ -1,11 +1,11 @@
 import axios from "axios";
 
 const apiURLs = {
-    development: "http://3.133.98.250:8081",
-    production: "",
+    development: "localhost",
+    production: "http://3.133.98.250:8081",
 };
 
-const apiUser = axios.create({ baseURL: apiURLs.development });
+const apiUser = axios.create({ baseURL: apiURLs.production });
 
 apiUser.interceptors.request.use((config) => {
     const loggedInUserJSON = localStorage.getItem("loggedInUser");
