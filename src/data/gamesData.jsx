@@ -1,6 +1,6 @@
 export const gamesData = [
     {
-        imageUrl: "src/assetsData/joeyKemon-pic.png",
+        imageUrl: "./src/assetsData/joeyKemon-pic.png",
         title: "JoeyKemon",
         description: "Explore diverse regions, capturing and training Pokémon. Engage in turn-based battles against other trainers and wild Pokémon to become the ultimate Pokémon Master.",
         gamePage: "https://joeyqpb.github.io/JoeyKemon-/"
