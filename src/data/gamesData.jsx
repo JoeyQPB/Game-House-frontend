@@ -1,18 +1,18 @@
 export const gamesData = [
     {
-        imageUrl: "src/assets/joeykemon-pic.png",
+        imageUrl: "assets/joeyKemon-pic.png",
         title: "JoeyKemon",
         description: "Explore diverse regions, capturing and training Pokémon. Engage in turn-based battles against other trainers and wild Pokémon to become the ultimate Pokémon Master.",
         gamePage: "https://joeyqpb.github.io/JoeyKemon-/"
     },
     {
-        imageUrl: "src/assets/spaceInvaders-pic.png",
+        imageUrl: "assets/spaceInvaders-pic.png",
         title: "Space Invaders",
         description: "Defend Earth from an onslaught of descending alien invaders by controlling a laser cannon. Move horizontally to aim and shoot at the invaders while dodging their incoming fire.",
         gamePage: "https://joeyqpb.github.io/Space-Invaders/"
     },
     {
-        imageUrl: "src/assets/figthMaster-pic.png",
+        imageUrl: "../assets/figthMaster-pic.png",
         title: "Figth Master",
         description: "Engage in intense sword duels with a friend in this thrilling two-player game. Choose your character and clash swords in fast- paced battles.",
         gamePage: "https://joeyqpb.github.io/Fight-Master/"
