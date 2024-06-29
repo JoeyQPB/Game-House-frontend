@@ -42,7 +42,7 @@ export const gamesData = [
         gamePage: "https://joeyqpb.github.io/little-snake/"
     },
     {
-        imageUrl: "src/assets/pacMan-pic.webp",
+        imageUrl: "./src/assets/pacMan-pic.webp",
         title: "Pac Man",
         description: "Guide the iconic yellow character through a maze, gobbling up dots and fruit while evading colorful ghosts. Eat power pellets to turn the tables and chase down the ghosts.Clear each maze to advance to the next level.",
         gamePage: "https://joeyqpb.github.io/Pacman-Game/"
