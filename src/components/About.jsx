@@ -2,6 +2,9 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Link } from 'react-router-dom';
 
+import linkedInPic from '../../src/assetsData/linkedIn-logo.png';
+import githubPic from '../../src/assetsData/github-logo.jpg';
+
 function About() {
     return (
         <div style={{
@@ -32,11 +35,11 @@ function About() {
             </p>
             <ListGroup horizontal style={{ justifyContent: 'center', marginTop: '20px', gap: '4rem' }}>
                 <ListGroup.Item as={Link} to={"https://www.linkedin.com/in/joey-quadros/"} style={{ backgroundColor: '#0077B5', color: 'white', border: 'none' }}>
-                    <img src="src/assets/linkedIn-logo.png" alt="LinkedIn Logo" style={{ width: '20px', marginRight: '5px' }} />
+                    <img src={linkedInPic} alt="LinkedIn Logo" style={{ width: '20px', marginRight: '5px' }} />
                     LinkedIn
                 </ListGroup.Item>
                 <ListGroup.Item as={Link} to={"https://github.com/JoeyQPB"} style={{ backgroundColor: 'black', color: 'white', border: 'none' }}>
-                    <img src="src/assets/github-logo.jpg" alt="GitHub Logo" style={{ width: '20px', marginRight: '5px' }} />
+                    <img src={githubPic} alt="GitHub Logo" style={{ width: '20px', marginRight: '5px' }} />
                     GitHub
                 </ListGroup.Item>
             </ListGroup>
